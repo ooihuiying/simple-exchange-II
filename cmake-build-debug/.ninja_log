@@ -1,0 +1,11 @@
+# ninja log v5
+5	645	1686391919681901339	CMakeFiles/Trading_Engine.dir/OrderBookEntry.cpp.o	946fb51d1f5bb8cf
+661	769	1686391919808187452	Trading_Engine	d16974e8fe5830cc
+5	661	1686391919698565994	CMakeFiles/Trading_Engine.dir/main.cpp.o	bc3baa37c2d8e11b
+0	99	1686404901730006971	build.ninja	17d4795eb2de2e85
+6	802	1686404902539093285	CMakeFiles/Trading_Engine.dir/main.cpp.o	bc3baa37c2d8e11b
+6	826	1686404902565143063	CMakeFiles/Trading_Engine.dir/MerkelMain.cpp.o	768bb37d7665f0a2
+826	909	1686404902650386708	Trading_Engine	97fc62f4e01137ce
+5	627	1686405619852808603	CMakeFiles/Trading_Engine.dir/main.cpp.o	bc3baa37c2d8e11b
+5	664	1686405619891324966	CMakeFiles/Trading_Engine.dir/MerkelMain.cpp.o	768bb37d7665f0a2
+665	740	1686405619969810866	Trading_Engine	97fc62f4e01137ce
