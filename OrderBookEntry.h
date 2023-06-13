@@ -7,7 +7,7 @@
 #ifndef TRADING_ENGINE_ORDERBOOKENTRY_H
 #define TRADING_ENGINE_ORDERBOOKENTRY_H
 
-enum OrderBookType{bid, ask};
+enum OrderBookType{bid, ask, unknown};
 
 class OrderBookEntry{
 private:
@@ -15,10 +15,11 @@ private:
     double amount;
     std::string timestamp{};
     std::string product{};
-    OrderBookType orderType;
+
 public:
     OrderBookEntry(double _price, double _amount, std::string _timestamp, std::string _product, OrderBookType _orderType);
-
+    static OrderBookType stringToOrderBookType(std::string s);
+    OrderBookType orderType;
 };
 
 

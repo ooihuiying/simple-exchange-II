@@ -3,15 +3,18 @@ project(Trading_Engine)
 
 set(CMAKE_CXX_STANDARD 17)
 
-# Add the new source files
+# Add the source files
 set(SOURCES
         main.cpp
         OrderBookEntry.cpp
-        MerkelMain.cpp)
+        MerkelMain.cpp
+        CSVReader.cpp CSVReader.h)
 
+# Add the header files
 set(HEADERS
         OrderBookEntry.h
-        OrderBookEntry.cpp OrderBookEntry.h MerkelMain.cpp MerkelMain.h)
+        MerkelMain.h
+        CSVReader.cpp CSVReader.h)
 
 # Add the executable target
 add_executable(Trading_Engine ${SOURCES} ${HEADERS})

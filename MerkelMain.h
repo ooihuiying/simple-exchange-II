@@ -6,12 +6,15 @@
 #define TRADING_ENGINE_MERKELMAIN_H
 
 
+#include "OrderBookEntry.h"
+
 class MerkelMain{
 public:
     MerkelMain();
     /** Call this to start **/
     void init();
 private:
+    std::vector<OrderBookEntry> orders;
     void loadOrderBook();
     void printMenu();
     void printHelp();
