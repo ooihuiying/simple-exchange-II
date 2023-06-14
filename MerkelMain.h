@@ -7,6 +7,7 @@
 
 
 #include "OrderBookEntry.h"
+#include "Wallet.h"
 
 class MerkelMain{
 public:
@@ -25,6 +26,10 @@ private:
     void goToNextTimeframe();
     int getUserOption();
     void processUserOption(int userOption);
+
+    std::string currentTime;
+
+    Wallet wallet;
 };
 
 

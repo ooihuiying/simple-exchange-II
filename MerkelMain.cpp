@@ -71,7 +71,7 @@ void MerkelMain::enterBid(){
 }
 
 void MerkelMain::printWallet(){
-    std::cout << "Your wallet is empty." << std::endl;
+    std::cout << "Your wallet is: " << wallet.toString() << std::endl;
 }
 
 void MerkelMain::goToNextTimeframe(){
