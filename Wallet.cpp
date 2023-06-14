@@ -2,6 +2,7 @@
 // Created by Hui Ying Ooi on 13/6/23.
 //
 
+#include <iostream>
 #include "Wallet.h"
 Wallet::Wallet() {
 
@@ -28,6 +29,29 @@ bool Wallet::containsCurrency(std::string type, double amount){
     return currencies[type] >= amount;
 }
 
+bool Wallet::removeCurrency(std::string type, double amount) {
+    if(amount < 0){
+        return false;
+    }
+    if(currencies.count(type) == 0){
+        std::cout << "No currency for " << type << std::endl;
+        return false;
+    }
+    if(!containsCurrency(type, amount)){
+        // not enough money
+        return false;
+    }
+    std::cout << "Removing " << type << " " << amount << std::endl;
+    currencies[type] -= amount;
+    return true;
+}
+
 std::string Wallet::toString() {
-    return "hi";
+    std::string s;
+    for(std::pair<std::string, double> pair: currencies){
+        std::string currency = pair.first;
+        double amount = pair.second;
+        s += currency + " : " + std::to_string(amount) + "\n";
+    }
+    return s;
 }

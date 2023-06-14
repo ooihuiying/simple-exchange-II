@@ -15,6 +15,7 @@ public:
     void insertCurrency(std::string type, double amount);
     // Check if the wallet contains this much currency or more
     bool containsCurrency(std::string type, double amount);
+    bool removeCurrency(std::string type, double amount);
     // Generate a string representation of the wallet
     std::string toString();
 
