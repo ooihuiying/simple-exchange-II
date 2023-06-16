@@ -20,3 +20,9 @@
 4	743	1686888401348383600	CMakeFiles/Trading_Engine.dir/MerkelMain.cpp.o	768bb37d7665f0a2
 5	879	1686888401484339170	CMakeFiles/Trading_Engine.dir/CSVReader.cpp.o	389857fed8dfa4f3
 879	957	1686888401565783545	Trading_Engine	d2ba45a418cf187c
+6	759	1686897920728223859	CMakeFiles/Trading_Engine.dir/main.cpp.o	bc3baa37c2d8e11b
+6	825	1686897920794251305	CMakeFiles/Trading_Engine.dir/MerkelMain.cpp.o	768bb37d7665f0a2
+7	873	1686897920842554023	CMakeFiles/Trading_Engine.dir/Wallet.cpp.o	d50ec0f64f1a2308
+7	954	1686897920924280004	CMakeFiles/Trading_Engine.dir/OrderBook.cpp.o	5fa4c8de3d6c260c
+7	972	1686897920942858631	CMakeFiles/Trading_Engine.dir/CSVReader.cpp.o	389857fed8dfa4f3
+972	1050	1686897921025050432	Trading_Engine	d2ba45a418cf187c
