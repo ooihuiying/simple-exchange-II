@@ -13,10 +13,11 @@ std::vector<OrderBookEntry> CSVReader::readCSV(std::string csvFileName){
     ss << __FILE__; // to retrieve the full path to the current source fil
     std::string currentFile = ss.str();
     std::string currentDir = currentFile.substr(0, currentFile.find_last_of("/\\"));
-    std::cout << csvFileName  << " " << currentDir+csvFileName << " " << std::endl;
+    std::string path = currentDir+"/"+csvFileName;
+    std::cout << csvFileName  << " " << path << " " << std::endl;
 
     std::vector<OrderBookEntry> entries;
-    std::ifstream csvFile{ currentDir+csvFileName};
+    std::ifstream csvFile{ path};
     std::string line;
     if(csvFile.is_open()){
         while(std::getline(csvFile, line)){
