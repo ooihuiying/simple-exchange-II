@@ -4,6 +4,8 @@
 
 #include <iostream>
 #include "Wallet.h"
+#include "CSVReader.h"
+
 Wallet::Wallet() {
 
 }
@@ -44,6 +46,23 @@ bool Wallet::removeCurrency(std::string type, double amount) {
     std::cout << "Removing " << type << " " << amount << std::endl;
     currencies[type] -= amount;
     return true;
+}
+
+bool Wallet::canFulfillOrder(OrderBookEntry order){
+    std::vector<std::string> currs = CSVReader::tokenise(order.product, '/');
+    if(order.orderType == OrderBookType::ask){
+        double amount = order.amount;
+        std::string currency = currs[0];
+        std::cout << "Wallet::canFulfillOrder ask" << currency << " " << amount;
+        return containsCurrency(currency, amount);
+    }
+    if(order.orderType == OrderBookType::bid){
+        double amount = order.amount * order.price;
+        std::string currency = currs[1];
+        std::cout << "Wallet::canFulfillOrder bid " << currency << " " << amount;
+        return containsCurrency(currency, amount);
+    }
+    return false;
 }
 
 std::string Wallet::toString() {

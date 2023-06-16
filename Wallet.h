@@ -7,6 +7,7 @@
 
 #include <string>
 #include <map>
+#include "OrderBookEntry.h"
 
 class Wallet {
 public:
@@ -17,6 +18,8 @@ public:
     bool containsCurrency(std::string type, double amount);
     bool removeCurrency(std::string type, double amount);
     // Generate a string representation of the wallet
+    // Checks if the wallet can cope with this ask or bid
+    bool canFulfillOrder(OrderBookEntry order);
     std::string toString();
 
 private:

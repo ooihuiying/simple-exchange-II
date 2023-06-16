@@ -1,14 +1,8 @@
 # ninja log v5
 6	812	1686666001289683413	CMakeFiles/Trading_Engine.dir/OrderBookEntry.cpp.o	946fb51d1f5bb8cf
-1069	1152	1686666001633775928	Trading_Engine	344ce7c61f35f6a7
-5	816	1686666001294157975	CMakeFiles/Trading_Engine.dir/main.cpp.o	bc3baa37c2d8e11b
-6	853	1686666001331002103	CMakeFiles/Trading_Engine.dir/MerkelMain.cpp.o	768bb37d7665f0a2
-0	99	1686667513866626046	build.ninja	17d4795eb2de2e85
-6	1069	1686666001547287578	CMakeFiles/Trading_Engine.dir/CSVReader.cpp.o	389857fed8dfa4f3
-5	1031	1686706016566696381	CMakeFiles/Trading_Engine.dir/Wallet.cpp.o	d50ec0f64f1a2308
-4	1085	1686706016621963208	CMakeFiles/Trading_Engine.dir/main.cpp.o	bc3baa37c2d8e11b
-5	1125	1686706016663888366	CMakeFiles/Trading_Engine.dir/MerkelMain.cpp.o	768bb37d7665f0a2
-1125	1231	1686706016771605081	Trading_Engine	1bcdcaaf141bd793
-5	618	1686706131624142704	CMakeFiles/Trading_Engine.dir/Wallet.cpp.o	d50ec0f64f1a2308
-5	768	1686706131773598650	CMakeFiles/Trading_Engine.dir/MerkelMain.cpp.o	768bb37d7665f0a2
 768	847	1686706131855770175	Trading_Engine	1bcdcaaf141bd793
+4	1085	1686706016621963208	CMakeFiles/Trading_Engine.dir/main.cpp.o	bc3baa37c2d8e11b
+5	768	1686706131773598650	CMakeFiles/Trading_Engine.dir/MerkelMain.cpp.o	768bb37d7665f0a2
+0	99	1686878285454690610	build.ninja	17d4795eb2de2e85
+6	1069	1686666001547287578	CMakeFiles/Trading_Engine.dir/CSVReader.cpp.o	389857fed8dfa4f3
+5	618	1686706131624142704	CMakeFiles/Trading_Engine.dir/Wallet.cpp.o	d50ec0f64f1a2308

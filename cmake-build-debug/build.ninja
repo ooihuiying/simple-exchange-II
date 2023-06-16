@@ -79,6 +79,12 @@ build CMakeFiles/Trading_Engine.dir/Wallet.cpp.o: CXX_COMPILER__Trading_Engine_D
   OBJECT_DIR = CMakeFiles/Trading_Engine.dir
   OBJECT_FILE_DIR = CMakeFiles/Trading_Engine.dir
 
+build CMakeFiles/Trading_Engine.dir/OrderBook.cpp.o: CXX_COMPILER__Trading_Engine_Debug /Users/huiyingooi/CLionProjects/Trading-Engine/OrderBook.cpp || cmake_object_order_depends_target_Trading_Engine
+  DEP_FILE = CMakeFiles/Trading_Engine.dir/OrderBook.cpp.o.d
+  FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2 -fcolor-diagnostics -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Trading_Engine.dir
+  OBJECT_FILE_DIR = CMakeFiles/Trading_Engine.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Trading_Engine
@@ -87,7 +93,7 @@ build CMakeFiles/Trading_Engine.dir/Wallet.cpp.o: CXX_COMPILER__Trading_Engine_D
 #############################################
 # Link the executable Trading_Engine
 
-build Trading_Engine: CXX_EXECUTABLE_LINKER__Trading_Engine_Debug CMakeFiles/Trading_Engine.dir/main.cpp.o CMakeFiles/Trading_Engine.dir/OrderBookEntry.cpp.o CMakeFiles/Trading_Engine.dir/MerkelMain.cpp.o CMakeFiles/Trading_Engine.dir/CSVReader.cpp.o CMakeFiles/Trading_Engine.dir/Wallet.cpp.o
+build Trading_Engine: CXX_EXECUTABLE_LINKER__Trading_Engine_Debug CMakeFiles/Trading_Engine.dir/main.cpp.o CMakeFiles/Trading_Engine.dir/OrderBookEntry.cpp.o CMakeFiles/Trading_Engine.dir/MerkelMain.cpp.o CMakeFiles/Trading_Engine.dir/CSVReader.cpp.o CMakeFiles/Trading_Engine.dir/Wallet.cpp.o CMakeFiles/Trading_Engine.dir/OrderBook.cpp.o
   FLAGS = -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.2
   OBJECT_DIR = CMakeFiles/Trading_Engine.dir
   POST_BUILD = :

@@ -8,6 +8,7 @@
 
 #include "OrderBookEntry.h"
 #include "Wallet.h"
+#include "OrderBook.h"
 
 class MerkelMain{
 public:
@@ -15,12 +16,10 @@ public:
     /** Call this to start **/
     void init();
 private:
-    std::vector<OrderBookEntry> orders;
-    void loadOrderBook();
     void printMenu();
     void printHelp();
     void printMarketStats();
-    void enterOffer();
+    void enterAsk();
     void enterBid();
     void printWallet();
     void goToNextTimeframe();
@@ -28,6 +27,8 @@ private:
     void processUserOption(int userOption);
 
     std::string currentTime;
+
+    OrderBook orderBook{"data.csv"};
 
     Wallet wallet;
 };

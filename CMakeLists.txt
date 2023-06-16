@@ -14,7 +14,7 @@ set(SOURCES
 set(HEADERS
         OrderBookEntry.h
         MerkelMain.h
-        CSVReader.cpp CSVReader.h Wallet.cpp Wallet.h)
+        CSVReader.cpp CSVReader.h Wallet.cpp Wallet.h OrderBook.cpp OrderBook.h)
 
 # Add the executable target
 add_executable(Trading_Engine ${SOURCES} ${HEADERS})
