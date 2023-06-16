@@ -7,6 +7,8 @@
 #include <map>
 #include <algorithm>
 #include <iostream>
+#include <set>
+#include <vector>
 
 OrderBook::OrderBook(std::string filename){
     orders = CSVReader::readCSV(filename);
@@ -14,20 +16,14 @@ OrderBook::OrderBook(std::string filename){
 
 // Return vector of all known products in the dataset
 std::vector<std::string> OrderBook::getKnownProducts() {
-    std::vector<std::string> products;
-
-    std::map<std::string, bool> prodMap;
+    std::set<std::string> products;
 
     for(OrderBookEntry& e: orders){
-        prodMap[e.product] = true;
+        products.insert(e.product);
     }
 
-    // Now flatten the map into a vector of strings
-    for(auto const& e: prodMap){
-        products.push_back(e.first);
-    }
-
-    return products;
+    std::vector<std::string> myVector(products.begin(), products.end());
+    return myVector;
 }
 
 // return vector of Orders according to the sent filters
