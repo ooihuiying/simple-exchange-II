@@ -68,8 +68,7 @@ void MerkelMain::enterAsk(){
         return;
     } else {
         try{
-            OrderBookEntry obe = CSVReader::stringsToOBE(tokens[1], tokens[2], currentTime, tokens[0], OrderBookType::ask);
-            obe.username="simuser";
+            OrderBookEntry obe = CSVReader::stringsToOBE(tokens[1], tokens[2], currentTime, tokens[0], OrderBookType::ask, "simuser");
             if(wallet.canFulfillOrder(obe)){
                 std::cout << "Wallet looks good. " <<std::endl;
                 orderBook.insertOrder(obe);
@@ -94,8 +93,7 @@ void MerkelMain::enterBid(){
         return;
     }
     try{
-        OrderBookEntry obe = CSVReader::stringsToOBE(tokens[1], tokens[2], currentTime, tokens[0], OrderBookType::bid);
-        obe.username="simuser";
+        OrderBookEntry obe = CSVReader::stringsToOBE(tokens[1], tokens[2], currentTime, tokens[0], OrderBookType::bid, "simuser");
         if(wallet.canFulfillOrder(obe)){
             std::cout << "Wallet looks good. " <<std::endl;
             orderBook.insertOrder(obe);

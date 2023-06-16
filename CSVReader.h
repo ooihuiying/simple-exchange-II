@@ -22,7 +22,8 @@ public:
                                        std::string amount,
                                        std::string timestamp,
                                        std::string product,
-                                       OrderBookType OrderBookType);
+                                       OrderBookType OrderBookType,
+                                       std::string username);
 };
 
 
