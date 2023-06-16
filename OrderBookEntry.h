@@ -7,11 +7,11 @@
 #ifndef TRADING_ENGINE_ORDERBOOKENTRY_H
 #define TRADING_ENGINE_ORDERBOOKENTRY_H
 
-enum OrderBookType{bid, ask, unknown, sale};
+enum OrderBookType{bid, ask, unknown, asksale, bidsale};
 
 class OrderBookEntry{
 public:
-    OrderBookEntry(double _price, double _amount, std::string _timestamp, std::string _product, OrderBookType _orderType);
+    OrderBookEntry(double _price, double _amount, std::string _timestamp, std::string _product, OrderBookType _orderType, std::string username="dataset");
     static OrderBookType stringToOrderBookType(std::string s);
     static bool compareByTimestamp(OrderBookEntry& e1, OrderBookEntry& e2){
         return e1.timestamp < e2.timestamp;
@@ -27,6 +27,7 @@ public:
     double amount;
     std::string product{};
     double price;
+    std::string username;
     std::string timestamp{};
 };
 
