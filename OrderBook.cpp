@@ -80,6 +80,7 @@ void OrderBook::insertOrder(OrderBookEntry &order) {
     std::sort(orders.begin(), orders.end(), OrderBookEntry::compareByTimestamp);
 }
 
+// Returns a vector of OrderBookEntry items which have their type set to OrderBookType::sale
 std::vector<OrderBookEntry> OrderBook::matchAsksToBids(std::string product, std::string timestamp) {
     // asks = orderbook.ask
     std::vector<OrderBookEntry> asks = getOrders(OrderBookType::ask, product, timestamp);
