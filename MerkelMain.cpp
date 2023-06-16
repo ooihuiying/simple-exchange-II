@@ -85,7 +85,7 @@ void MerkelMain::enterAsk(){
 }
 
 void MerkelMain::enterBid(){
-    std::cout << "Make a bid - enter amount" << std::endl;
+    std::cout << "Make a bid - enter amount: product,price,amount, eg ETH/BTC,1,1 " << std::endl;
     std::string input;
     std::getline(std::cin, input);
     std::vector<std::string> tokens = CSVReader::tokenise(input, ',');
@@ -121,6 +121,10 @@ void MerkelMain::goToNextTimeframe(){
         for (OrderBookEntry& sale : sales)
         {
             std::cout << "Sale price: " << sale.price << " amount " << sale.amount << std::endl;
+            if (sale.username == "simuser"){
+                // update the wallet
+                wallet.processSale(sale);
+            }
         }
     }
     currentTime = orderBook.getNextTime(currentTime);

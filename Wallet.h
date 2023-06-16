@@ -20,6 +20,9 @@ public:
     // Generate a string representation of the wallet
     // Checks if the wallet can cope with this ask or bid
     bool canFulfillOrder(OrderBookEntry order);
+    // updates the contents of the wallet
+    // assumes the order was made by the owner of the wallet
+    void processSale(OrderBookEntry& sale);
     std::string toString();
 
 private:
